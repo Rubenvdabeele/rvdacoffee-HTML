@@ -2,17 +2,15 @@
   <div class="home-container">
     <div class="home-container1"><span class="home-text">Hello world</span></div>
     <div class="home-banner">
-      <h1 class="home-text1">Learn to keep it simple</h1>
+      <h1 class="home-text1">Learn to keep it pimple</h1>
       <span class="home-text2">
         <span>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-            volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in
-            dignissim tortor.
-            <span v-html="rawtj80"></span>
-          </span>
-          <span><span v-html="rawtzxl"></span></span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in
+          dignissim tortor.
+          <span v-html="raw967g"></span>
         </span>
+        <span><span v-html="rawhe60"></span></span>
       </span>
       <div class="home-btn-group">
         <button class="home-button button">Get Started</button>
@@ -27,8 +25,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      rawtj80: ' ',
-      rawtzxl: ' ',
+      raw967g: ' ',
+      rawhe60: ' ',
     }
   },
   head: {
