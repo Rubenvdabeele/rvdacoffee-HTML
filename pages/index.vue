@@ -9,9 +9,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
             volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in
             dignissim tortor.
-            <span v-html="raw02wg"></span>
+            <span v-html="rawtj80"></span>
           </span>
-          <span><span v-html="rawknvb"></span></span>
+          <span><span v-html="rawtzxl"></span></span>
         </span>
       </span>
       <div class="home-btn-group">
@@ -27,8 +27,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      raw02wg: ' ',
-      rawknvb: ' ',
+      rawtj80: ' ',
+      rawtzxl: ' ',
     }
   },
   head: {
