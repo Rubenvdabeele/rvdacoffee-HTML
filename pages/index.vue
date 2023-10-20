@@ -1,32 +1,36 @@
 <template>
   <div class="home-container">
-    <div class="home-container1"><span class="home-text">Hello world</span></div>
     <div class="home-banner">
-      <h1 class="home-text1">Learn to keep it pimple</h1>
-      <span class="home-text2">
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in
-          dignissim tortor.
-          <span v-html="raw967g"></span>
-        </span>
-        <span><span v-html="rawhe60"></span></span>
-      </span>
-      <div class="home-btn-group">
-        <button class="home-button button">Get Started</button>
-        <button class="home-button1 button">Learn More</button>
+      <div class="home-container1">
+        <div class="home-container2">
+          <h1 class="home-text">Ruben van den Abeele</h1>
+          <span class="home-text1">
+            Is a
+            <span v-html="rawbnpb"></span>
+          </span>
+          <nuxt-link to="/barista" class="home-navlink">barista</nuxt-link>
+          <span class="Subheading">and a</span>
+          <nuxt-link to="/software-engineer" class="home-navlink1">
+            software engineer
+          </nuxt-link>
+        </div>
       </div>
     </div>
+    <app-footer rootClassName="footer-root-class-name"></app-footer>
   </div>
 </template>
 
 <script>
+import AppFooter from '../components/footer'
+
 export default {
   name: 'Home',
+  components: {
+    AppFooter,
+  },
   data() {
     return {
-      raw967g: ' ',
-      rawhe60: ' ',
+      rawbnpb: ' ',
     }
   },
   head: {
@@ -50,73 +54,108 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-}
-.home-container1 {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home-text {
-  font-size: 40px;
-  font-family: "Gentium Book Plus";
+  background-color: var(--dl-color-brand-ebebeb);
 }
 .home-banner {
+  flex: 1;
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-threeunits);
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+.home-container1 {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  padding-left: 0%;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-text {
+  font-size: 3em;
+  font-family: "Gentium Book Plus";
+  font-weight: 700;
+  line-height: 1.15;
+  padding-top: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-twounits);
+  text-transform: none;
+  text-decoration: none;
 }
 .home-text1 {
-  font-size: 3rem;
-  text-align: center;
+  font-size: 2em;
+  font-family: "Gentium Book Plus";
+  font-weight: 500;
 }
-.home-text2 {
-  max-width: var(--dl-size-size-maxwidth);
-  margin-top: var(--dl-space-space-twounits);
-  text-align: center;
-  margin-bottom: var(--dl-space-space-twounits);
-}
-.home-btn-group {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-.home-button {
-  color: var(--dl-color-gray-white);
-  transition: 0.3s;
-  padding-top: var(--dl-space-space-unit);
+.home-navlink {
+  font-size: 2.5em;
+  font-family: "Gentium Book Plus";
+  font-weight: 700;
+  line-height: 1.15;
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
-  padding-bottom: var(--dl-space-space-unit);
-  background-color: var(--dl-color-gray-black);
+  text-transform: none;
+  text-decoration: none;
 }
-.home-button:hover {
-  transform: scale(1.02);
-}
-.home-button1 {
-  transition: 0.3s;
-  margin-left: var(--dl-space-space-unit);
-  padding-top: var(--dl-space-space-unit);
+.home-navlink1 {
+  font-size: 2.5em;
+  font-family: "Gentium Book Plus";
+  font-weight: 700;
+  line-height: 1.15;
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
-  padding-bottom: var(--dl-space-space-unit);
+  text-transform: none;
+  text-decoration: none;
 }
-.home-button1:hover {
-  transform: scale(1.02);
+@media(max-width: 991px) {
+  .home-banner {
+    flex: 1;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 @media(max-width: 767px) {
   .home-banner {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
-  .home-text2 {
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
+  .home-text {
+    font-size: 3.5em;
+  }
+  .home-navlink {
+    font-family: Gentium Book Plus;
+    margin-left: var(--dl-space-space-twounits);
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+  }
+  .home-navlink1 {
+    margin-left: var(--dl-space-space-twounits);
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
   }
 }
 @media(max-width: 479px) {
@@ -126,12 +165,18 @@ export default {
     padding-right: var(--dl-space-space-unit);
     padding-bottom: var(--dl-space-space-twounits);
   }
-  .home-btn-group {
-    flex-direction: column;
+  .home-container1 {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
   }
-  .home-button1 {
-    margin-top: var(--dl-space-space-unit);
-    margin-left: 0px;
+  .home-navlink {
+    border-bottom-width: 0px;
+  }
+  .home-navlink1 {
+    border-bottom-width: 0px;
   }
 }
 </style>
